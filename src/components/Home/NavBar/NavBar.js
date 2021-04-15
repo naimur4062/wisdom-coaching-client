@@ -13,11 +13,11 @@ const NavBar = () => {
                     <img style={{ width: '80px' }} src={educationIcon} alt="" />
                 </div>
                 <div className="nav-header">
-                    <h1 style={{ letterSpacing: '10px' }}>WISDOM</h1>
-                    <h3>Coaching Center</h3>
+                    <h1 style={{ letterSpacing: '10px', color: '#ff4880' }}>WISDOM</h1>
+                    <h3 style={{ color: '#3a4256' }}>Coaching Center</h3>
                 </div>
             </div>
-            <div className="">
+            <div>
                 <Navbar collapseOnSelect expand="lg">
                     <div className="container">
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
