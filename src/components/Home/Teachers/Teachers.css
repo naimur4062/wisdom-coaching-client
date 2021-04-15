@@ -1,0 +1,29 @@
+.teachers .card{
+    border: 0;
+}
+.teachers .card-header{
+    border: 0;
+    background-color: transparent;
+}
+
+.teachers .card:hover{
+    background-image: linear-gradient(275deg, #FFB6C1,#FFA07A);
+    color: #fff !important;
+    transition:  .1s  all ease-in-out !important;
+}
+.teachers .card:hover h6,
+.teachers .card:hover p,
+.teachers .card:hover h5
+{
+    color: #fff !important;
+
+}
+.teachers .card:hover img{
+    display: none;
+}
+.social-icon img{
+    display: none;
+}
+.teachers .card:hover .social-icon img{
+    display: block;
+}
