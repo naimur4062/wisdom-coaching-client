@@ -31,7 +31,6 @@ const Login = () => {
                     photo: photoURL,
                 };
                 setLoggedInUser(signedInUser);
-                console.log(signedInUser);
                 history.replace(from);
             }).catch((error) => {
                 const errorMessage = error.message;

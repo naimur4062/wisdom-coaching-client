@@ -1,0 +1,13 @@
+/* .booking-details{
+    background-color: lightblue;
+} */
+/* .booking-details div{
+    margin-left: 50px;
+} */
+.booking-details p{
+    background-color: whitesmoke;
+    width: 30%;
+    padding: 15px;
+    border-radius:10px;
+    color: gray;
+}
