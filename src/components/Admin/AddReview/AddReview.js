@@ -36,18 +36,18 @@ const AddReview = () => {
                     <div className="admin container p-3 mb-3 mt-5">
                         <div className="p-3">
                             <div className="mb-3">
-                                <input type="text" name="name" defaultValue="" className="form-control" placeholder="Your Name" ref={register} />
+                                <input type="text" required name="name" defaultValue="" className="form-control" placeholder="Your Name" ref={register} />
                             </div>
                             <div className="mb-4">
-                                <input type="text" name="designation" defaultValue="" className="form-control" placeholder="Your Designation" ref={register} />
+                                <input type="text" required name="designation" defaultValue="" className="form-control" placeholder="Your Designation" ref={register} />
                             </div>
                             <div className="opinion">
-                                <textarea name="opinion" defaultValue="" className="form-control" id="" rows="3" placeholder="Your Opinion" ref={register}></textarea>
+                                <textarea required name="opinion" defaultValue="" className="form-control" id="" rows="3" placeholder="Your Opinion" ref={register}></textarea>
                             </div>
                         </div>
-                    </div>
-                    <div className="save-button d-flex justify-content-end">
-                        <input type="submit" value="save" />
+                        <div className="save-button d-flex justify-content-start">
+                            <input type="submit" value="submit" />
+                        </div>
                     </div>
                 </form>
             </div>
