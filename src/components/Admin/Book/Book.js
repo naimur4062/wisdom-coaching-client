@@ -46,15 +46,15 @@ const Book = () => {
                 <Sidebar />
             </div>
             <div className="col-md-9 booking-details">
-                <h4>Please, pay the charge to continue the course</h4>
+                <h4 style={{color: '#3a4256'}} className="mt-5 mb-5">Please, pay the charge to continue the course</h4>
                 <div>
                     <div>
                         <p>{signedInUser.name}</p>
                         <p>{signedInUser.email}</p>
                         <p>{course.name}</p>
-                        <p>{course.price}</p>
+                        <p>You have to pay ${course.price}</p>
                     </div>
-                    <div style={{ width: '500px' }}>
+                    <div>
                         <ProcessPayment handlePayment={handlePayment} />
                     </div>
                 </div>

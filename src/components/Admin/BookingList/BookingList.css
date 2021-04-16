@@ -1,0 +1,10 @@
+.booking{
+    border-radius: 20px;
+    padding: 20px;
+    width: 900px;
+}
+.booking-heading{
+    background-color: #f5f6fa;
+    padding: 10px;
+    border-radius: 20px;
+}

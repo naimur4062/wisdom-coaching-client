@@ -1,0 +1,34 @@
+.admin-form{
+    background-color: lightblue;
+    border-radius: 10px;
+}
+.admin-form form{
+    width: 700px;
+    position: relative;
+}
+.admin input{
+    width: 600px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+}
+.opinion textarea{
+    width: 600px;
+}
+.admin label{
+    font-weight: 700;
+}
+.admin{
+    border-radius: 20px;
+}
+
+.save-button input{
+    background-color: #ff4880;
+    border: none;
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
