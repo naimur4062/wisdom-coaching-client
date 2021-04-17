@@ -38,9 +38,9 @@ const AddReview = () => {
     return (
         <div className="mt-5">
             <h3>Review</h3>
-            <div className="admin-form mt-3">
+            <div className="review-form mt-3">
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <div className="admin container p-3 mb-3 mt-5">
+                    <div className="review container p-3 mb-3 mt-5">
                         <div className="p-3">
                             <div className="mb-3">
                                 <input type="text" required name="name" defaultValue="" className="form-control" placeholder="Your Name" ref={register} />

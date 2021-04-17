@@ -1,0 +1,11 @@
+.coaching-img img{
+    height: 400px;
+}
+.coaching-title p{
+    position: relative;
+    left: 270px;
+    top: 200px;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+}

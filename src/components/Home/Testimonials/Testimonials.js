@@ -6,7 +6,7 @@ import './Testimonials.css';
 
 const Testimonials = () => {
     const [reviews, setReviews] = useState([]);
-    console.log(reviews)
+  
     useEffect(() => {
         fetch('http://localhost:5000/reviews')
             .then(res => res.json())

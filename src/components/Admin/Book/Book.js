@@ -24,19 +24,19 @@ const Book = () => {
     const handlePayment = (payment) => {
         const bookingDetails = { course: course, ...signedInUser, payment }
         console.log(bookingDetails)
-        
+
         fetch('http://localhost:5000/addBooking', {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json'
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(bookingDetails)
-          })
+        })
             .then(res => res.json())
             .then(data => {
-              if (data) {
-                alert('You buy the course successfully')
-              }
+                if (data) {
+                    alert('You buy the course successfully')
+                }
             })
     }
 
@@ -45,17 +45,19 @@ const Book = () => {
             <div className="col-md-3 d-flex justify-content-center">
                 <Sidebar />
             </div>
-            <div className="col-md-9 booking-details">
-                <h4 style={{color: '#3a4256'}} className="mt-5 mb-5">Please, pay the charge to continue the course</h4>
+            <div className="col-md-9 booking-details d-flex justify-content-center">
                 <div>
+                    <h4 style={{ color: '#3a4256' }} className="mt-5 mb-5">Please, pay the charge to book the course</h4>
                     <div>
-                        <p>{signedInUser.name}</p>
-                        <p>{signedInUser.email}</p>
-                        <p>{course.name}</p>
-                        <p>You have to pay ${course.price}</p>
-                    </div>
-                    <div>
-                        <ProcessPayment handlePayment={handlePayment} />
+                        <div>
+                            <p>{signedInUser.name}</p>
+                            <p>{signedInUser.email}</p>
+                            <p>{course.name}</p>
+                            <p>You have to pay ${course.price}</p>
+                        </div>
+                        <div>
+                            <ProcessPayment handlePayment={handlePayment} />
+                        </div>
                     </div>
                 </div>
             </div>

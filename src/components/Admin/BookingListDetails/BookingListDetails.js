@@ -7,7 +7,7 @@ const BookingListDetails = (props) => {
 
     return (
         <div>
-            <div className="container d-flex justify-content-between mt-3">
+            <div className="container d-flex justify-content-between">
                 <p className="name">{name}</p>
                 <p className="email">{email}</p>
                 <p className="course">{course}</p>

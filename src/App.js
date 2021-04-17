@@ -14,44 +14,60 @@ import Book from './components/Admin/Book/Book';
 import BookingList from './components/Admin/BookingList/BookingList';
 import UserBookingList from './components/Admin/UserBookingList/UserBookingList';
 import Reviews from './components/Admin/Reviews/Reviews';
+import MakeAdmin from './components/Admin/MakeAdmin/MakeAdmin';
+import Dashboard from './components/Admin/Dashboard/Dashboard';
+import ManageServices from './components/Admin/ManageServices/ManageServices';
 
 export const UserContext = createContext();
+export const AdminContext = createContext();
 export const RatingContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
+  const [admin, setAdmin] = useState(false);
   const [rating, setRating] = useState(0);
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <RatingContext.Provider value={[rating, setRating]}>
-        <Router>
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/home">
-              <Home />
-            </Route>
-            <Route path="/admin">
-              <Admin />
-            </Route>
-            <Route path="/bookingList">
-              <BookingList />
-            </Route>
-            <PrivateRoute path="/review">
-              <Reviews />
-            </PrivateRoute>
-            <PrivateRoute path="/userBookingList">
-              <UserBookingList />
-            </PrivateRoute>
-            <PrivateRoute path="/course/:id">
-              <Book />
-            </PrivateRoute>
-            <Route path="/login">
-              <Login />
-            </Route>
-          </Switch>
-        </Router>
+        <AdminContext.Provider value={[admin, setAdmin]}>
+          <Router>
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route exact path="/home">
+                <Home />
+              </Route>
+              <PrivateRoute path="/dashboard">
+                <Dashboard />
+              </PrivateRoute>
+              <PrivateRoute path="/addCourse">
+                <Admin />
+              </PrivateRoute>
+              <PrivateRoute path="/makeAdmin">
+                <MakeAdmin />
+              </PrivateRoute>
+              <PrivateRoute path="/manageServices">
+                <ManageServices />
+              </PrivateRoute>
+              <PrivateRoute path="/bookingList">
+                <BookingList />
+              </PrivateRoute>
+              <PrivateRoute path="/review">
+                <Reviews />
+              </PrivateRoute>
+              <PrivateRoute path="/userBookingList">
+                <UserBookingList />
+              </PrivateRoute>
+              <PrivateRoute path="/course/:id">
+                <Book />
+              </PrivateRoute>
+              <Route path="/login">
+                <Login />
+              </Route>
+            </Switch>
+          </Router>
+        </AdminContext.Provider>
       </RatingContext.Provider>
     </UserContext.Provider>
   );

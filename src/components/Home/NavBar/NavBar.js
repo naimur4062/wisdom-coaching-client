@@ -2,10 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Nav, Navbar } from 'react-bootstrap';
 import educationIcon from '../../../images/educationalicon.png';
+import { useContext } from 'react';
+import { AdminContext } from '../../../App';
 
 
 
 const NavBar = () => {
+    const [admin, setAdmin] = useContext(AdminContext);
+
     return (
         <div className="container mt-5 d-flex justify-content-between header">
             <div className="d-flex">
@@ -26,17 +30,17 @@ const NavBar = () => {
                                 <Link className="nav-link" to="/home">
                                     Home
                                 </Link>
-                                <Link className="nav-link" to="/donation">
-                                    Donation
+                               <Link className="nav-link" to="/dashboard">
+                                    Dashboard
                                 </Link>
-                                <Link className="nav-link " to="/events">
-                                    Events
+                                <Link className="nav-link " to="/review">
+                                    Review
                                 </Link>
-                                <Link className="nav-link " to="/blogs">
-                                    Blogs
+                                <Link className="nav-link " to="">
+                                    Contact Us
                                 </Link>
                                 <div>
-                                    <Link to=""><Button style={{ backgroundColor: '#ff4880', padding: '10px', color: 'white', width: '100px', fontWeight: '500' }}>Admin</Button></Link>
+                                    <Link to="/login"><Button style={{ backgroundColor: '#ff4880', padding: '10px', color: 'white', width: '100px', fontWeight: '500' }}>Login</Button></Link>
                                 </div>
                             </Nav>
                         </Navbar.Collapse>

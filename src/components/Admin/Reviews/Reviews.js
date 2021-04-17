@@ -5,10 +5,10 @@ import Sidebar from '../Sidebar/Sidebar';
 const Reviews = () => {
     return (
         <div className="row">
-        <div className="col-md-2 d-flex justify-content-center">
+        <div className="col-md-3 d-flex justify-content-center">
             <Sidebar/>
         </div>
-        <div className="col-md-10 d-flex justify-content-center">
+        <div className="col-md-9 d-flex justify-content-center">
             <AddReview/>
         </div>
     </div>
