@@ -32,7 +32,7 @@ const Teachers = () => {
         <section className="teachers my-5">
         <div className="container">
             <div className="section-header text-center">
-                <h5 style={{color: '#ff7162'}} className="text-uppercase">Teacher</h5>
+                <h5 style={{color: '#ff4880'}} className="text-uppercase">Teacher</h5>
                 <h1 style={{color: '#2b3c6b'}}>World Best Teacher <br/> Will Teach</h1>
             </div>
             <div className="card-deck mt-5 row">

@@ -1,0 +1,16 @@
+.cardImage img{
+    border-radius: 50px;
+    width: 100px;
+}
+.name{
+    text-align: start;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+.card-details{
+    text-align: justify;
+}
+.testimonialRating{
+    text-align: start;
+    margin-left: 15px;
+}

@@ -16,14 +16,20 @@ import UserBookingList from './components/Admin/UserBookingList/UserBookingList'
 import Reviews from './components/Admin/Reviews/Reviews';
 
 export const UserContext = createContext();
+export const RatingContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
+  const [rating, setRating] = useState(0);
   return (
-      <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <RatingContext.Provider value={[rating, setRating]}>
         <Router>
           <Switch>
             <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/home">
               <Home />
             </Route>
             <Route path="/admin">
@@ -32,9 +38,9 @@ function App() {
             <Route path="/bookingList">
               <BookingList />
             </Route>
-            <Route path="/review">
+            <PrivateRoute path="/review">
               <Reviews />
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path="/userBookingList">
               <UserBookingList />
             </PrivateRoute>
@@ -46,7 +52,8 @@ function App() {
             </Route>
           </Switch>
         </Router>
-      </UserContext.Provider>
+      </RatingContext.Provider>
+    </UserContext.Provider>
   );
 }
 

@@ -2,15 +2,22 @@ import React from 'react';
 import './AddReview.css';
 import { useForm } from "react-hook-form";
 import { useState } from 'react';
+import UserRating from '../UserRating/UserRating';
+import { RatingContext, UserContext } from '../../../App';
+import { useContext } from 'react';
 
 const AddReview = () => {
     const { register, handleSubmit } = useForm();
+    const [rating, setRating] = useContext(RatingContext);
+    const [signedInUser, setSignedInUser] = useContext(UserContext);
 
     const onSubmit = data => {
         const reviewData = {
             name: data.name,
+            photo: signedInUser.photo,
             designation: data.designation,
             opinion: data.opinion,
+            rating: rating
         }
         console.log(reviewData);
         const url = `http://localhost:5000/addReview`;
@@ -45,8 +52,11 @@ const AddReview = () => {
                                 <textarea required name="opinion" defaultValue="" className="form-control" id="" rows="3" placeholder="Your Opinion" ref={register}></textarea>
                             </div>
                         </div>
-                        <div className="save-button d-flex justify-content-start">
+                        <div className="save-button d-flex justify-content-between">
                             <input type="submit" value="submit" />
+                            <div>
+                                <UserRating />
+                            </div>
                         </div>
                     </div>
                 </form>

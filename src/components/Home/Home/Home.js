@@ -4,6 +4,7 @@ import Courses from '../Courses/Courses';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Teachers from '../Teachers/Teachers';
+import Testimonials from '../Testimonials/Testimonials';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <Header/>
             <Courses/>
             <Teachers/>
+            <Testimonials/>
             <ContactUs/>
             <Footer/>
         </div>
