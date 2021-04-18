@@ -6,7 +6,7 @@ import './Testimonial.css';
 const Testimonial = (props) => {
     const { photo, name, designation, opinion, rating } = props.review;
     return (
-        <div className="cardDiv shadow-sm col-md-3 m-2 text-center">
+        <div className="cardDiv shadow-sm col-md-3 col-sm-6 col-12 m-2 text-center">
             <div className="mt-5 cardImage d-flex justify-content-start">
                 <img src={photo} alt="" />
                 <div className="name">

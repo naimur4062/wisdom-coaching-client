@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Course = ({ course }) => {
     return (
-        <div className="card shadow-sm col-md-3 m-2 text-center">
+        <div className="card shadow-sm col-md-3 col-sm-6 col-12 m-2 text-center">
             <div className="mt-5 cardImg">
                 <img src={course.imageURL} alt="" width="80" height="80" />
             </div>
