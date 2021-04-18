@@ -9,7 +9,7 @@ const BookingList = () => {
         fetch('http://localhost:5000/bookings')
             .then(res => res.json())
             .then(data => setBookings(data))
-    }, []);
+    }, [bookings]);
 
     return (
         <div className="container-fluid row" >
