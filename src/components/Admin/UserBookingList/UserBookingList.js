@@ -11,7 +11,7 @@ const UserBookingList = () => {
     const [userBookings, setUserBookings] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/userBookings?email=' + signedInUser.email)
+        fetch('https://quiet-atoll-18146.herokuapp.com/userBookings?email=' + signedInUser.email)
             .then(res => res.json())
             .then(data => setUserBookings(data))
     }, [])

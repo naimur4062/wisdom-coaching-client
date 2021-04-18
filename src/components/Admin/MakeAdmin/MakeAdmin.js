@@ -7,7 +7,7 @@ const MakeAdmin = () => {
     const onSubmit = data => {
         const adminData = { email: data.email }
         
-        const url = `http://localhost:5000/addAdmin`;
+        const url = `https://quiet-atoll-18146.herokuapp.com/addAdmin`;
         fetch(url, {
             method: 'POST',
             headers: {

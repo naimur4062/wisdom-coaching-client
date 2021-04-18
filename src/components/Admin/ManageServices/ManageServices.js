@@ -9,13 +9,13 @@ import './ManageServices.css';
 const ManageServices = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/courses')
+        fetch('https://quiet-atoll-18146.herokuapp.com/courses')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [services]);
 
     const deleteProduct = id => {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://quiet-atoll-18146.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

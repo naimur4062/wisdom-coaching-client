@@ -20,7 +20,7 @@ const AddReview = () => {
             rating: rating
         }
         console.log(reviewData);
-        const url = `http://localhost:5000/addReview`;
+        const url = `https://quiet-atoll-18146.herokuapp.com/addReview`;
         fetch(url, {
             method: 'POST',
             headers: {

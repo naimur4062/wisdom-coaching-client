@@ -6,7 +6,7 @@ import './BookingList.css';
 const BookingList = () => {
     const [bookings, setBookings] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/bookings')
+        fetch('https://quiet-atoll-18146.herokuapp.com/bookings')
             .then(res => res.json())
             .then(data => setBookings(data))
     }, [bookings]);

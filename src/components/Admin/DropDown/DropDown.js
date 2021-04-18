@@ -4,7 +4,7 @@ import './DropDown.css';
 
 const DropDown = ({ booking }) => {
     const handleUpdate = (e, id) => {
-        fetch('http://localhost:5000/update/' + id, {
+        fetch('https://quiet-atoll-18146.herokuapp.com/update/' + id, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'

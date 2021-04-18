@@ -15,7 +15,7 @@ const Book = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/course/${id}`)
+        fetch(`https://quiet-atoll-18146.herokuapp.com/course/${id}`)
             .then(res => res.json())
             .then(data => {
                 setCourse(data[0])
@@ -26,7 +26,7 @@ const Book = () => {
         const bookingDetails = { course: course, ...signedInUser, payment, status }
         console.log(bookingDetails)
 
-        fetch('http://localhost:5000/addBooking', {
+        fetch('https://quiet-atoll-18146.herokuapp.com/addBooking', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

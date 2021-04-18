@@ -15,7 +15,7 @@ const AddCourse = () => {
             description: data.description,
             imageURL: imageURL
         }
-        const url = `http://localhost:5000/addCourse`;
+        const url = `https://quiet-atoll-18146.herokuapp.com/addCourse`;
         fetch(url, {
             method: 'POST',
             headers: {
