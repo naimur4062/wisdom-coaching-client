@@ -2,14 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Nav, Navbar } from 'react-bootstrap';
 import educationIcon from '../../../images/educationalicon.png';
-import { useContext } from 'react';
-import { AdminContext } from '../../../App';
-
 
 
 const NavBar = () => {
-    const [admin, setAdmin] = useContext(AdminContext);
-
     return (
         <div className="container mt-5 d-flex justify-content-between header">
             <div className="d-flex">
@@ -30,11 +25,11 @@ const NavBar = () => {
                                 <Link className="nav-link" to="/home">
                                     Home
                                 </Link>
-                               <Link className="nav-link" to="/dashboard">
+                                <Link className="nav-link" to="/dashboard">
                                     Dashboard
                                 </Link>
-                                <Link className="nav-link " to="/review">
-                                    Review
+                                <Link className="nav-link " to="">
+                                    Blogs
                                 </Link>
                                 <Link className="nav-link " to="">
                                     Contact Us

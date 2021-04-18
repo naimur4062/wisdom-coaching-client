@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 import './Sidebar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignOutAlt, faGripHorizontal, faUserPlus, faBorderAll, faPlus, faShoppingCart, faCommentAlt } from '@fortawesome/free-solid-svg-icons';
-import { AdminContext, UserContext } from '../../../App';
+import { UserContext } from '../../../App';
 import educationIcon from '../../../images/educationalicon.png'
 
 const Sidebar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const [admin, setAdmin] = useContext(AdminContext);
     const [isAdmin, setIsAdmin] = useState(false);
     console.log('admin', isAdmin)
 
@@ -23,7 +22,6 @@ const Sidebar = () => {
             .then(res => res.json())
             .then(data => {
                 setIsAdmin(data);
-                setAdmin(data);
             })
     }, [loggedInUser]);
     return (
@@ -61,7 +59,7 @@ const Sidebar = () => {
                             </Link>
                         </li>
                     </div>}
-                    {!isAdmin && <div>
+                    <div>
                         <li>
                             <Link to="/course/:id" style={{ color: "gray" }}>
                                 <FontAwesomeIcon className="icon" icon={faShoppingCart} /> <span>Book</span>
@@ -77,7 +75,7 @@ const Sidebar = () => {
                                 <FontAwesomeIcon className="icon" icon={faCommentAlt} /> <span>Review</span>
                             </Link>
                         </li>
-                    </div>}
+                    </div>
                 </ul>
                 <div>
                     <ul className="list-unstyled">

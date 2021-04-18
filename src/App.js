@@ -19,17 +19,14 @@ import Dashboard from './components/Admin/Dashboard/Dashboard';
 import ManageServices from './components/Admin/ManageServices/ManageServices';
 
 export const UserContext = createContext();
-export const AdminContext = createContext();
 export const RatingContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
-  const [admin, setAdmin] = useState(false);
   const [rating, setRating] = useState(0);
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <RatingContext.Provider value={[rating, setRating]}>
-        <AdminContext.Provider value={[admin, setAdmin]}>
           <Router>
             <Switch>
               <Route exact path="/">
@@ -67,7 +64,6 @@ function App() {
               </Route>
             </Switch>
           </Router>
-        </AdminContext.Provider>
       </RatingContext.Provider>
     </UserContext.Provider>
   );

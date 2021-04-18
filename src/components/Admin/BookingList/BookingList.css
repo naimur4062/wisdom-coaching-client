@@ -8,3 +8,13 @@
     padding: 10px;
     border-radius: 20px;
 }
+.course-name p{
+    margin-left: 50px;
+    width: 200px;
+}
+.course-payment p{
+    margin-left: 125px;
+}
+.course-status{
+    margin-left: 140px;
+}

@@ -52,22 +52,22 @@ const AddCourse = () => {
                         <div className="d-flex justify-content-around p-3">
                             <div>
                                 <label htmlFor="form-label">Course Name</label> <br />
-                                <input name="name" defaultValue="" placeholder="Course Name" type="form-control" ref={register} />
+                                <input name="name" defaultValue="" placeholder="Course Name" type="form-control" required ref={register} />
                             </div>
                             <div>
                                 <label htmlFor="form-label">Description</label><br />
-                                <input name="description" defaultValue="" placeholder="Course Description" ref={register} />
+                                <input name="description" defaultValue="" placeholder="Course Description" required ref={register} />
                             </div>
                         </div>
 
                         <div className="d-flex justify-content-around p-3">
                             <div>
                                 <label htmlFor="form-label">Add Price</label> <br />
-                                <input name="price" defaultValue="" placeholder="Course Price" ref={register} />
+                                <input name="price" defaultValue="" placeholder="Course Price required" required ref={register} />
                             </div>
                             <div>
                                 <label htmlFor="form-label">Add Photo</label> <br />
-                                <input name="exampleRequired" type="file" onChange={handleImageUpload} />
+                                <input name="exampleRequired" type="file" required onChange={handleImageUpload} />
                             </div>
                         </div>
                     </div>

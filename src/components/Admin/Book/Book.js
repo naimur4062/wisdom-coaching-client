@@ -9,6 +9,7 @@ import Sidebar from '../Sidebar/Sidebar';
 import './Book.css';
 
 const Book = () => {
+    const status = 'pending';
     const [course, setCourse] = useState([]);
     const [signedInUser, setSignedInUser] = useContext(UserContext);
     const { id } = useParams();
@@ -22,7 +23,7 @@ const Book = () => {
     }, [id]);
 
     const handlePayment = (payment) => {
-        const bookingDetails = { course: course, ...signedInUser, payment }
+        const bookingDetails = { course: course, ...signedInUser, payment, status }
         console.log(bookingDetails)
 
         fetch('http://localhost:5000/addBooking', {
