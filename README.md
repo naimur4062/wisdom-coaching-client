@@ -1,5 +1,5 @@
-# Welcome my site. This is my last-assignment of programming hero's course.
-# This is a site for coaching center which serve the quality education.
+# Welcome my site. This is a service site for admission, jobs and sopoken english.
+# This is wisdom coaching center which serve the quality education.
 
 The features of coding:
 
